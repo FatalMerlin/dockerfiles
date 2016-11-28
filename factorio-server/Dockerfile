@@ -16,7 +16,7 @@ COPY ["init.sh", "/init.sh"]
 COPY ["start.sh", "/start.sh"]
 COPY ["start-server.sh", "/start-server.sh"]
 
-RUN /init.sh
+RUN chmod +x /init.sh /start.sh /start-server.sh && sleep 1 && /init.sh
 
 EXPOSE 34197/udp
 
